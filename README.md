@@ -1,5 +1,7 @@
 # GmailOauth
 
+[![Build Status](https://travis-ci.org/karthik-mallavarapu/gmail_oauth.svg?branch=master)](https://travis-ci.org/karthik-mallavarapu/gmail_oauth)
+
 [![Coverage Status](https://coveralls.io/repos/karthik-mallavarapu/gmail_oauth/badge.svg?branch=master&service=github)](https://coveralls.io/github/karthik-mallavarapu/gmail_oauth?branch=master)
 
 ## Installation
