@@ -1,12 +1,12 @@
 # GmailOauth
 
-TODO: Write a gem description
+[![Coverage Status](https://coveralls.io/repos/karthik-mallavarapu/gmail_oauth/badge.svg?branch=master&service=github)](https://coveralls.io/github/karthik-mallavarapu/gmail_oauth?branch=master)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'gmail_oauth'
+    gem 'gmail_oauth2'
 
 And then execute:
 
