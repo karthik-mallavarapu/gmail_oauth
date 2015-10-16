@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gmail_oauth/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "gmail_oauth"
+  spec.name          = "gmail_oauth2"
   spec.version       = GmailOauth::VERSION
   spec.authors       = ["Karthik Mallavarapu"]
   spec.email         = ["karthik.mallavarapu@gmail.com"]
@@ -15,7 +15,14 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/karthik-mallavarapu/gmail_oauth"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  #spec.files         = `git ls-files -z`.split("\x0")
+  spec.files = [
+    "lib/gmail_oauth.rb",
+    "lib/gmail_oauth/gmail_imap_extensions.rb",
+    "lib/gmail_oauth/client.rb",
+    "lib/gmail_oauth/message.rb",
+    "lib/gmail_oauth/version.rb"
+  ]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
@@ -25,9 +32,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "coveralls", '~> 0.8.2'
+  spec.add_development_dependency "coveralls", '~> 0.8'
   spec.add_development_dependency "rubocop", '~> 0.34'
-  spec.add_development_dependency "gem-release", '~> 0.7.4'
-  spec.add_development_dependency "rspec", '~> 3.3'
-  spec.add_development_dependency "pry", '~> 0.10.1'
+  spec.add_development_dependency "gem-release", '~> 0.7'
+  spec.add_development_dependency "pry", '~> 0.10'
+  spec.add_development_dependency "minitest", '~> 5.8'
+  spec.add_development_dependency "minitest-reporters", "~> 1.1"
+  spec.add_development_dependency "faker", "~> 1.5"
 end
