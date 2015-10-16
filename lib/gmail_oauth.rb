@@ -1,19 +1,18 @@
-require "gmail_oauth/version"
-require "gmail_oauth/gmail_imap_extensions"
+require 'net/imap'
+require 'mail'
+require 'gmail_xoauth'
+require 'gmail_oauth/version'
+require 'gmail_oauth/gmail_imap_extensions'
+require 'gmail_oauth/client'
+require 'gmail_oauth/message'
 
-class GmailOauth
+module GmailOauth
 
-  attr_reader :imap, :email
-
-  def initialize(email, access_token)
-    @imap = Net::IMAP.new('imap.gmail.com', 993, usessl = true, certs = nil,·verify = false)
-    @email = email
-    imap.authenticate('XOAUTH2', email, access_token)
-    GmailImapExtensions.patch_net_imap_response_parser imap.
-      instance_variable_get("@parser").singleton_class
+  def self.authenticate(email, access_token)
+    imap_client = Net::IMAP.new('imap.gmail.com', 993, usessl=true, certs=nil, verify=false)
+    client = Client.new(imap_client)
+    client.connect(email, access_token)
+    client
   end
 
-  def select_mailbox(mailbox='INBOX')
-    imap.select(mailbox)
-  end
 end
