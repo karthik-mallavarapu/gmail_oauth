@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "mail", '~> 2.6', ">= 2.6.3"
   spec.add_dependency "gmail_xoauth", '~> 0.4', ">= 0.4.1"
+  spec.add_dependency 'mimemagic', '~> 0.3'
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"

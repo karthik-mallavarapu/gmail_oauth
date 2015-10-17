@@ -30,7 +30,12 @@ class GmailOauth::Message
     email.attachment?
   end
 
-  def attachments
-    email.attachments if email.attachment?
+  def get_attachments
+    return [] unless has_attachments?
+    attachments = []
+    email.attachments.each do |attach|
+      attachments << Attachment.new(attach) 
+    end
+    attachments
   end
 end

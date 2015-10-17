@@ -1,6 +1,8 @@
 require 'net/imap'
 require 'mail'
 require 'gmail_xoauth'
+require 'mimemagic'
+require 'mimemagic/overlay'
 require 'gmail_oauth/version'
 require 'gmail_oauth/gmail_imap_extensions'
 require 'gmail_oauth/client'
