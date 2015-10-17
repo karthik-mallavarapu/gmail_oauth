@@ -33,7 +33,7 @@ class GmailOauth::Client
       emails = imap.uid_fetch(grp.compact, 'RFC822')
       emails.each do |email|
         message = GmailOauth::Message.new(Mail.
-                  read_from_string(message.attr['RFC822']), message.attr['UID']) 
+                  read_from_string(email.attr['RFC822']), email.attr['UID']) 
         yield(message) if block_given?
         messages << message
       end
