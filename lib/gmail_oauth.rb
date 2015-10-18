@@ -7,6 +7,7 @@ require 'gmail_oauth/version'
 require 'gmail_oauth/gmail_imap_extensions'
 require 'gmail_oauth/client'
 require 'gmail_oauth/message'
+require 'gmail_oauth/attachment'
 
 module GmailOauth
 
