@@ -14,7 +14,8 @@ class MessageMultiCharsetTest < MiniTest::Test
   end
 
   def test_utf8_body_text
-    assert_equal @message.body_text.gsub("\n", ''), @actual_data['body_text'].gsub("\n", '')
+    assert_equal @message.body_text.gsub(/[\r\n]/, ''), 
+      @actual_data['body_text'].gsub(/[\r\n]/, '')
   end
 
   def test_utf8_body_html

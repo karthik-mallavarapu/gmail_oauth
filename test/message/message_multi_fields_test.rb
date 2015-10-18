@@ -14,6 +14,6 @@ class MessageMultiFieldsTest < MiniTest::Test
   end
 
   def test_multi_cc_addresses
-
+    assert_equal @message.cc, @actual_data['cc']
   end
 end

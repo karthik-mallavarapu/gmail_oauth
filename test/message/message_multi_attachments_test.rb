@@ -21,7 +21,8 @@ class MessageMultiAttachmentsTest < Minitest::Test
   end
 
   def test_message_body
-    assert_equal @message.body_text, @actual_data['body_text']
+    assert_equal @message.body_text.gsub(/[\r\n]/, ''), 
+      @actual_data['body_text'].gsub(/[\r\n]/, '')
     assert_equal @message.body_html, @actual_data['body_html']
   end
 
