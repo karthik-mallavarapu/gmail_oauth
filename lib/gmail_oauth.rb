@@ -13,8 +13,8 @@ module GmailOauth
 
   def self.authenticate(email, access_token)
     imap_client = Net::IMAP.new('imap.gmail.com', 993, usessl=true, certs=nil, verify=false)
-    client = Client.new(imap_client)
-    client.connect(email, access_token)
+    client = Client.new(imap_client, email, access_token)
+    client.connect
     client
   end
 
