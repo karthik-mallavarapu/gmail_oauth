@@ -67,4 +67,15 @@ class ClientTest < Minitest::Test
     assert emails[0].from.first, actual_data['from']
     assert emails[0].subject, actual_data['subject']
   end
+
+  def test_get_thread_ids
+    mock1 = Minitest::Mock.new
+    mock2 = Minitest::Mock.new
+    mock1.expect :attr, {'X-GM-THRID' => '1000'}
+    mock2.expect :attr, {'X-GM-THRID' => '1001'}
+    @imap.expect :uid_fetch, [mock1, mock2], [[1, 2], '(X-GM-THRID)']
+    thread_ids = @client.get_thread_ids([1, 2])
+    assert @imap.verify
+    assert_equal thread_ids, ['1000', '1001']
+  end
 end

@@ -41,14 +41,16 @@ class GmailOauth::Client
     messages
   end
 
-  def fetch_threaded_emails(uids, &block)
+  def fetch_threaded_emails(thread_id, &block)
+    email_uids = imap.uid_search("X-GM-THRID #{thread_id}")
+    messages = fetch_emails(email_uids)
+    yield(thread_id, messages) if block_given?
+    messages
+  end
+
+  def get_thread_ids(uids)
     thread_responses = imap.uid_fetch(uids, '(X-GM-THRID)')
-    thread_ids = thread_responses.map { |t| t.attr['X-GM-THRID'] }
-    thread_ids.each do |thread_id|
-      thread_email_ids = imap.uid_search("X-GM-THRID #{thread_id}")
-      messages = fetch_emails(thread_email_ids)
-      yield(thread_id, messages) if block_given?
-    end
+    thread_responses.map { |t| t.attr['X-GM-THRID'] }
   end
 
   private
