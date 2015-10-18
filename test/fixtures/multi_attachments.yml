@@ -1,0 +1,15 @@
+to: verda.herzog@example.org
+from: toney_krajcik@example.com
+subject: Email with attachments
+received_on: Sun, 18 Oct 2015 11:28:54 +0530
+body_text: |+
+  Hey,
+
+  Reprehenderit officia vel veniam dolorem non. Possimus corporis et sed ad
+  sequi maiores dicta. Distinctio unde architecto soluta ut aut aspernatur
+  nulla.
+
+  Best,
+  Toney
+body_html: 
+  <div dir=3D"ltr"><div style=3D"font-size:12.8px">Hey,</div><div style=3D"font-size:12.8px"><br></div><span style=3D"font-size:12.8px">Reprehenderit officia vel veniam dolorem non. Possimus corporis et sed ad sequi maiores dicta. Distinctio unde architecto soluta ut aut aspernatur nulla.</span><br style=3D"font-size:12.8px"><div style=3D"font-size:12.8px"><br></div><div style=3D"font-size:12.8px">Best,</div><div style=3D"font-size:12.8px">Toney</div></div>
