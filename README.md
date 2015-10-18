@@ -32,9 +32,11 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'gmail_oauth
+require 'gmail_oauth'
+
 # Authenticate a session using your gmail id and gmail oauth2 access token
 gmail = GmailOauth.authenticate(email, access_token)
+
 # Select a mailbox to search and/or read emails.
 gmail.select # By default, INBOX is selected
 ```
