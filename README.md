@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install gmail_oauth
+    $ gem install gmail_oauth2
 
 ## Usage
 
