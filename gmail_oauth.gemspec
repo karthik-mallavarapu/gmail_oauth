@@ -11,7 +11,8 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A ruby gem for accessing gmail using oauth2 tokens.}
   spec.description   = %q{The library uses gmail_xoauth, mail and monkey-patched
                           ruby imap library to support gmail oauth extensions 
-                          such as X-GM-THRID}
+                          such as X-GM-THRID. Supports fetching uids, emails, 
+                          threaded emails, attachments and much more.}
   spec.homepage      = "https://github.com/karthik-mallavarapu/gmail_oauth"
   spec.license       = "MIT"
 
