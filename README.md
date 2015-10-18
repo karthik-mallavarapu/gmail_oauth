@@ -1,10 +1,12 @@
 # gmail_oauth
 
-A convenient way to access gmail through oauth2 tokens. Supports fetching email uids, threaded email conversations, email messages, attachment downloads and attachment metadata. 
-
 [![Build Status](https://travis-ci.org/karthik-mallavarapu/gmail_oauth.svg?branch=master)](https://travis-ci.org/karthik-mallavarapu/gmail_oauth)
 [![Coverage Status](https://coveralls.io/repos/karthik-mallavarapu/gmail_oauth/badge.svg?branch=master&service=github)](https://coveralls.io/github/karthik-mallavarapu/gmail_oauth?branch=master)
 [![Code Climate](https://codeclimate.com/github/karthik-mallavarapu/gmail_oauth/badges/gpa.svg)](https://codeclimate.com/github/karthik-mallavarapu/gmail_oauth)
+
+A convenient way to access gmail through oauth2 tokens. Supports fetching email uids, threaded email conversations, email messages, attachment downloads and attachment metadata.
+
+For an introduction to Gmail's Oauth2 mechanism, refer to this [link](https://developers.google.com/gmail/xoauth2_protocol)
 
 ## Installation
 
@@ -21,7 +23,7 @@ Or install it yourself as:
     $ gem install gmail_oauth2
     
 ## Features
-    * Authenticate gmail sessions using gmail oauth2 access tokens. Refer to [Gmail Oauth2 Protocol](https://developers.google.com/gmail/xoauth2_protocol) for details
+    * Authenticate gmail sessions using gmail oauth2 access tokens.
     * Read emails from any mailbox.
     * Read emails based on last read email UID. Helps synchronize local email repositories with your gmail mailbox.
     * Read emails as threaded conversations.
