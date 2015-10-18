@@ -21,6 +21,7 @@ Gem::Specification.new do |spec|
     "lib/gmail_oauth/gmail_imap_extensions.rb",
     "lib/gmail_oauth/client.rb",
     "lib/gmail_oauth/message.rb",
+    "lib/gmail_oauth/attachment.rb",
     "lib/gmail_oauth/version.rb"
   ]
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
